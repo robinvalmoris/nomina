@@ -1,0 +1,51 @@
+const mongoose=require('mongoose');
+
+const userSchema=mongoose.Schema({
+	username:{
+		type:String,
+		require:true,
+		unique:true
+	},
+	pwd:{
+		type:String,
+		require:true
+	},
+	profile:{
+		type:String,
+		require:true
+	},
+	name:{
+		type:String,
+		require:false
+	},
+	lastname:{
+		type:String,
+		require:false
+	},
+	number_phone:{
+		type:String,
+		require:false
+	},
+	type_id:{
+		type:String,
+		require:false
+	},
+	id_number:{
+		type:String,
+		require:false
+	},
+	email:{
+		type:String,
+		require:false
+	},
+	salary:{
+		type:Number,
+		require:false
+	},
+	date_start:{
+		type:Date,
+		require:false
+	}
+});
+
+module.exports=mongoose.model('User',userSchema);
